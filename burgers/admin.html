@@ -1,0 +1,50 @@
+<?php
+header('Content-Type: text/html; charset=utf-8');
+require('php/admin.php');
+?>
+<style>
+	table{
+		border-collapse: collapse;
+	}
+	td{
+		text-align: center;
+		padding: 10px;
+		border: 1px solid #000;
+		margin: 0;
+	}
+	tr{
+		margin: 0;
+	}
+</style>
+<h1>Зарегистрированные пользователи</h1>
+<table>
+    <tr>
+		<td>Id</td>
+		<td>Имя заказчика</td>
+		<td>email</td>
+		<td>Телефон</td>
+	</tr>
+<?php
+users();
+?>
+</table>
+<h1>Заказы</h1>
+<table>
+    <tr>
+		<td>Номер заказа</td>
+		<td>Имя заказчика</td>
+		<td>email</td>
+		<td>Телефон</td>
+		<td>Улица</td>
+		<td>Дом</td>
+		<td>Корпус</td>
+		<td>Квартира</td>
+		<td>Этаж</td>
+		<td>Комментарий</td>
+		<td>Оплата</td>
+		<td>Перезвонить?</td>
+	</tr>
+<?php
+orders();
+?>
+</table>
